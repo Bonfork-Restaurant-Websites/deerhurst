@@ -1,0 +1,167 @@
+/* Reservation Modal */
+.reservation-form h2 {
+    font-family: "Georgia", serif;
+    text-transform: uppercase;
+    font-size: 38px;
+    margin: 50px 0;
+}
+
+.reservation-form form {
+    margin: 0 auto;
+}
+
+@media (min-width: 576px) {
+    .reservation-form form {
+        max-width: 522px;
+    }
+}
+
+.reservation-form form label {
+    color: #000;	
+    font-size: 14px;	
+    letter-spacing: 2.55px;	
+    line-height: 17px;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+}
+
+.reservation-form form input {
+    border-radius: 0px !important;
+    border: 1px solid rgba(151,151,151,0.34) !important;
+    background: #fff !important;
+    padding: 23px 21px !important;
+    height: 70px !important;
+    font-size: 14px !important;	
+    line-height: 24px !important;
+    color: #000 !important;
+    text-transform: uppercase;
+    letter-spacing: 2.55px;	
+}
+
+.reservation-form form input:focus {
+    box-shadow: none !important;
+    outline: none !important;
+    border: 1px solid #624032 !important;
+}
+
+.reservation-form form .btn-submit {
+    background: #624032;
+    border-radius: 0px;
+    margin-top: 18px;
+    color: #fff;
+    font-size: 15px;	
+    letter-spacing: 2px;	
+    line-height: 20px;
+    text-transform: uppercase;
+    padding: 25px 0;
+    border: 1px solid #624032;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+.reservation-form form .btn-submit:hover {
+    background: transparent;
+    color: #624032;
+}
+
+.reservation-form .intl-tel-input {
+    display: block !important;
+}
+
+.reservation-form #phone {
+    padding: 0 100px !important;
+}
+
+.reservation-form #reservation-alert {
+    text-align: center;
+    max-width: 522px;
+    margin: 0 auto;
+    display: none;
+}
+
+.reservation-form #g-recaptcha-response {
+    display: block !important;
+    position: absolute;
+    margin: -85px 0 0 0 !important;
+    width: 302px !important;
+    height: 76px !important;
+    z-index: -999999;
+    opacity: 0;
+}
+
+
+@media (max-width: 767px) {
+    .modal-fullscreen-xs-down {
+        padding: 0 !important;
+    }
+    .modal-fullscreen-xs-down .modal-dialog {
+        width: 100%;
+        min-width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .modal-fullscreen-xs-down .modal-content {
+        height: auto;
+        min-height: 100%;
+        border: 0 none;
+        border-radius: 0;
+    }
+}
+@media (max-width: 991px) {
+    .modal-fullscreen-sm-down {
+        padding: 0 !important;
+    }
+    .modal-fullscreen-sm-down .modal-dialog {
+        width: 100%;
+        min-width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .modal-fullscreen-sm-down .modal-content {
+        height: auto;
+        min-height: 100%;
+        border: 0 none;
+        border-radius: 0;
+    }
+}
+@media (max-width: 1199px) {
+    .modal-fullscreen-md-down {
+        padding: 0 !important;
+    }
+    .modal-fullscreen-md-down .modal-dialog {
+        width: 100%;
+        min-width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .modal-fullscreen-md-down .modal-content {
+        height: auto;
+        min-height: 100%;
+        border: 0 none;
+        border-radius: 0;
+    }
+}
+.modal-fullscreen {
+    padding: 0 !important;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    animation-delay: .2s;
+}
+.modal-fullscreen .modal-dialog {
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.modal-fullscreen .modal-content {
+    height: auto;
+    min-height: 100%;
+    border: 0 none;
+    border-radius: 0;
+    transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
+}

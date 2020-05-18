@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A demo website for the Deerhurst Restaurant Template" />
+    <meta name="keywords" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://deerhurst.bonfork.net/menu" />
+    <meta property="og:title" content="Deerhurst Restaurant" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="A demo website for the Deerhurst Restaurant Template" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous">
+
+    <link rel="dns-prefetch" href="//fonts.googleapis.com/">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com/">
+    <!--
+    ____   __   __ _  ____  __  ____  __ _
+    (  _ \ /  \ (  ( \(  __)/  \(  _ \(  / )
+    ) _ ((  O )/    / ) _)(  O ))   / )  (
+    (____/ \__/ \_)__)(__)  \__/(__\_)(__\_)
+    -->
+    <title>Deerhurst - Menu</title>
+    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon-180x180.png" />
+
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+    <!-- Schema json -->
+    <script id="data" type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "Restaurant",
+          "priceRange": "$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Toronto",
+            "addressRegion": "ON",
+            "addressCountry": "Canada",
+            "postalCode": "M5E 1Z9",
+            "streetAddress": "12 Yonge St."
+          },
+          "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 43.643162,
+              "longitude": -79.376259
+          },
+          "name": "Deerhurst Restaurant",
+          "telephone": "+44 (0)1234 56789",
+          "url": "https://deerhurst.bonfork.net",
+          "paymentAccepted": "",
+          "description": "Deerhurst Restaurant Demo description. Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam id urna egestas ultricies nulla at viverra nibh donec sollicitudin metus sit amet est laoreet gravida donec cursus enim quis.",
+        
+          "servesCuisine": "French cuisine",
+          "hasMenu": "https://deerhurst.bonfork.net/menu",
+          "acceptsReservations": "True",
+          
+          "openingHoursSpecification": [
+              {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                      "Monday",
+                      "Tuesday",
+                      "Wednesday",
+                      "Thursday",
+                      "Friday",
+                      "Saturday",
+                      "Sunday"
+                  ],
+                  "opens": "11:00",
+                  "closes": "23:00"
+              }
+          ],
+          "hasOfferCatalog":{
+            "@type":"OfferCatalog",
+            "name":"Menu",
+            "itemListElement":[
+               {
+                  "@type":"OfferCatalog",
+                  "name":"Main Menu",
+                  "itemListElement":[
+                     {
+                        "@type":"OfferCatalog",
+                        "name":"Apetizers",
+                        "itemListElement":[
+                           {
+                              "@type":"Offer",
+                              "priceCurrency":"$",
+                              "price":5,
+                              "itemOffered":{
+                                 "@type":"MenuItem",
+                                 "name":"GREEK SALAD",
+                                 "description":"Tomatoes, Cucumbers, Krinos Feta",
+                                 "image":[
+                                    ""
+                                 ],
+                                 "nutrition":{
+                                    "@type":"NutritionInformation",
+                                    "calories":""
+                                 }
+                              }
+                           },
+                           {
+                              "@type":"Offer",
+                              "priceCurrency":"$",
+                              "price":8,
+                              "itemOffered":{
+                                 "@type":"MenuItem",
+                                 "name":"SUPREME NACHOS",
+                                 "description":"Chicken, Cheese, Olive oil, Tomatoes",
+                                 "image":[
+                                    ""
+                                 ],
+                                 "nutrition":{
+                                    "@type":"NutritionInformation",
+                                    "calories":""
+                                 }
+                              }
+                           },
+                           {
+                              "@type":"Offer",
+                              "priceCurrency":"$",
+                              "price":7.50,
+                              "itemOffered":{
+                                 "@type":"MenuItem",
+                                 "name":"PATATO SKINS",
+                                 "description":"Mozzarella, Cheddar, Bacon",
+                                 "image":[
+                                    ""
+                                 ],
+                                 "nutrition":{
+                                    "@type":"NutritionInformation",
+                                    "calories":""
+                                 }
+                              }
+                           },
+                           {
+                             "@type":"Offer",
+                             "priceCurrency":"$",
+                             "price":6.25,
+                             "itemOffered":{
+                                "@type":"MenuItem",
+                                "name":"MOZZARELLA STICKS",
+                                "description":"Mozzarella, Sauce, Cheese",
+                                "image":[
+                                   ""
+                                ],
+                                "nutrition":{
+                                   "@type":"NutritionInformation",
+                                   "calories":""
+                                }
+                             }
+                          },
+                          {
+                             "@type":"Offer",
+                             "priceCurrency":"$",
+                             "price":6.50,
+                             "itemOffered":{
+                                "@type":"MenuItem",
+                                "name":"HUMMUS PLATE",
+                                "description":"Carrot Sticks, Cucumbers, Onions",
+                                "image":[
+                                   ""
+                                ],
+                                "nutrition":{
+                                   "@type":"NutritionInformation",
+                                   "calories":""
+                                }
+                             }
+                          },
+                          {
+                             "@type":"Offer",
+                             "priceCurrency":"$",
+                             "price":12.95,
+                             "itemOffered":{
+                                "@type":"MenuItem",
+                                "name":"BUFFALO WINGS",
+                                "description":"Sauce, Baguette, Pepperoni",
+                                "image":[
+                                   ""
+                                ],
+                                "nutrition":{
+                                   "@type":"NutritionInformation",
+                                   "calories":""
+                                }
+                             }
+                          }
+                        ]
+                     },
+                     {
+                        "@type":"OfferCatalog",
+                        "name":"Main Dishes",
+                        "itemListElement":[
+                           {
+                              "@type":"Offer",
+                              "priceCurrency":"$",
+                              "price":14.75,
+                              "itemOffered":{
+                                 "@type":"MenuItem",
+                                 "name":"MARGHERITA PIZZA",
+                                 "description":"Tomatoes, Mozzarella, Parmesan",
+                                 "image":[
+                                    ""
+                                 ],
+                                 "nutrition":{
+                                    "@type":"NutritionInformation",
+                                    "calories":""
+                                 }
+                              }
+                           },
+                           {
+                              "@type":"Offer",
+                              "priceCurrency":"$",
+                              "price":5,
+                              "itemOffered":{
+                                 "@type":"MenuItem",
+                                 "name":"CANADIAN PIZZA",
+                                 "description":"Sauce, Canadian Bacon, Onions, Mozzarella",
+                                 "image":[
+                                    ""
+                                 ],
+                                 "nutrition":{
+                                    "@type":"NutritionInformation",
+                                    "calories":""
+                                 }
+                              }
+                           },
+                           {
+                              "@type":"Offer",
+                              "priceCurrency":"$",
+                              "price":8.25,
+                              "itemOffered":{
+                                 "@type":"MenuItem",
+                                 "name":"FRENCH ONION",
+                                 "description":"Beef, Onion, Mozzarella",
+                                 "image":[
+                                    ""
+                                 ],
+                                 "nutrition":{
+                                    "@type":"NutritionInformation",
+                                    "calories":""
+                                 }
+                              }
+                           },
+                           {
+                             "@type":"Offer",
+                             "priceCurrency":"$",
+                             "price":7.25,
+                             "itemOffered":{
+                                "@type":"MenuItem",
+                                "name":"HOUSE SPECIAL SALAD",
+                                "description":"Olive oil, Red peppers, Cucumbers, Tomatoes",
+                                "image":[
+                                   ""
+                                ],
+                                "nutrition":{
+                                   "@type":"NutritionInformation",
+                                   "calories":""
+                                }
+                             }
+                          },
+                          {
+                             "@type":"Offer",
+                             "priceCurrency":"$",
+                             "price":8.25,
+                             "itemOffered":{
+                                "@type":"MenuItem",
+                                "name":"TURKEY BLAT",
+                                "description":"Roasted turkey, Bacon, Avocado, Baguette",
+                                "image":[
+                                   ""
+                                ],
+                                "nutrition":{
+                                   "@type":"NutritionInformation",
+                                   "calories":""
+                                }
+                             }
+                          },
+                          {
+                             "@type":"Offer",
+                             "priceCurrency":"$",
+                             "price":7.25,
+                             "itemOffered":{
+                                "@type":"MenuItem",
+                                "name":"VEGGIE WRAP",
+                                "description":"Roasted vegetables, Mayo, Tomatoes, Spinach",
+                                "image":[
+                                   ""
+                                ],
+                                "nutrition":{
+                                   "@type":"NutritionInformation",
+                                   "calories":""
+                                }
+                             }
+                          }
+                        ]
+                     }
+                  ]
+               }
+            ]
+         }
+      }
+  </script>
+</head>
+
+<body>
+    <div class="modal permalink page-model modal-fullscreen fade" id="theModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    ... remote content from "data-remote" loads here ...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed-top main-menu">
+        <img src="images/close.svg" alt="Close Menu" class="img-fluid" id="close-icon">
+        <ul class="nav flex-column">
+            <li class="nav-item delay-1">
+                <a class="nav-link" href="story.html" title="Story">Story</a>
+            </li>
+            <li class="nav-item delay-2">
+                <a class="nav-link active" href="menu.html" title="Our Menus">Menu</a>
+            </li>
+            <li class="nav-item delay-3">
+                <a class="nav-link " href="gallery.html" title="Gallery">Gallery</a>
+            </li>
+            <li class="nav-item delay-4">
+                <a class="nav-link " href="contact.html" title="Contact us">Contact us</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="schedule"></div>
+
+    <header>
+        <a href="index.html">
+            <img src="images/logo.png" alt="Logo" class="img-fluid">
+        </a>
+        <hr>
+        <hr>
+
+        <div class="menu d-none d-sm-block">
+            <ul>
+                <li>
+                    <a href="story.html" title="Story">Story</a>
+                </li>
+                <div class="dot"></div>
+                <li>
+                    <a href="menu.html" title="Menu" class="active">Menu</a>
+                </li>
+                <div class="dot"></div>
+                <li>
+                    <a href="gallery.html" title="Gallery">Gallery</a>
+                </li>
+                <div class="dot"></div>
+                <li>
+                    <a href="contact.html" title="Contact us">Contact us</a>
+                </li>
+            </ul>
+        </div>
+
+        <a class="nav-button nav-link d-flex justify-content-center d-sm-none">
+            <span id="nav-icon3">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+            <span class="menu-text">Menu</span>
+        </a>
+
+        <hr>
+    </header>
+
+    <div class="banner">
+        <h1>Our Menu</h1>
+        <a ref="#theModal" class="btn btn-book cc-active" data-remote="/reservation.html" data-toggle="modal" data-target="#theModal"
+            title="Book your table">Book your table</a>
+    </div>
+
+    <hr id="banner-hr">
+
+    <div class="container">
+        <div class="content">
+            <div class="row">
+                <div class="col-lg-5 mb-4">
+                    <div class="row">
+                        <div class="col-3">
+                            <h6>Apetizers</h6>
+                        </div>
+                        <div class="col-9 menu">
+                            <div class="menu-item">
+                                <h5>Greek Salad $5</h5>
+                                <p>Tomatoes, Cucumbers, Krinos Feta</p>
+                            </div>
+                            <div class="menu-item">
+                                <h5>Supreme Nachos $8</h5>
+                                <p>Chicken, Cheese, Olive oil, Tomatoes</p>
+                            </div>
+                            <div class="menu-item">
+                                <h5>Patato Skins $7.50</h5>
+                                <p>Mozzarella, Cheddar, Bacon</p>
+                            </div>
+                            <div class="menu-item">
+                                <h5>Mozzarella Sticks $6.25</h5>
+                                <p>Mozzarella, Sauce, Cheese</p>
+                            </div>
+                            <div class="menu-item">
+                                <h5>Hummus Plate $6.50</h5>
+                                <p>Carrot Sticks, Cucumbers, Onions</p>
+                            </div>
+                            <div class="menu-item">
+                                <h5>Buffalo Wings $12.95</h5>
+                                <p>Sauce, Baguette, Pepperoni</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-5">
+                        <div class="col-3">
+                            <h6>Main Dishes</h6>
+                        </div>
+                        <div class="col-9 menu">
+                            <div class="menu-item">
+                                <h5>Margherita Pizza $14.75</h5>
+                                <p>Tomatoes, Mozzarella, Parmesan</p>
+                            </div>
+                            <div class="menu-item">
+                                <h5>Canadian Pizza $5</h5>
+                                <p>Sauce, Canadian Bacon, Onions, Mozzarella</p>
+                            </div>
+                            <div class="menu-item">
+                                <h5>French Onion $8.25</h5>
+                                <p>Beef, Onion, Mozzarella</p>
+                            </div>
+                            <div class="menu-item">
+                                <h5>House Special Salad $6.75</h5>
+                                <p>Olive oil, Red peppers, Cucumbers, Tomatoes</p>
+                            </div>
+                            <div class="menu-item">
+                                <h5>Turkey Blat $8.25
+                                    <span>Hot</span>
+                                </h5>
+                                <p>Roasted turkey, Bacon, Avocado, Baguette</p>
+                            </div>
+                            <div class="menu-item">
+                                <h5>Veggie Wrap $7.25</h5>
+                                <p>Roasted vegetables, Mayo, Tomatoes, Spinach</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 text-center">
+                    <div class="reveal">
+                        <img src="images/menu-img.jpg" class="img-fluid" alt="Menu Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <img src="images/bottom-logo.png" alt="Footer Logo" class="img-fluid">
+
+            <h6>Subcribe to our newsletter</h6>
+
+            <form id="newsletter-form" class="simform" autocomplete="off" method="POST">
+                <div class="simform-inner">
+                    <ol class="questions">
+                        <li>
+                            <input type="text" name="name" id="name" required="required" placeholder="your name" />
+                        </li>
+                        <li>
+                            <input type="email" name="email" id="email" required="required" placeholder="your email" />
+                        </li>
+                    </ol>
+                    <button class="submit" type="submit">Submit</button>
+                    <div class="controls">
+                        <button class="next"></button>
+                        <div class="progress"></div>
+                        <span class="number">
+                            <span class="number-current"></span>
+                            <span class="number-total"></span>
+                        </span>
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+                <span class="final-message"></span>
+
+            </form>
+
+            <div class="footer-menu">
+                <ul>
+                    <li>
+                        <a href="story.html" title="Story">Story</a>
+                    </li>
+                    <li>
+                        <a href="menu.html" title="Menu">Menu</a>
+                    </li>
+                    <li>
+                        <a href="gallery.html" title="Gallery">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" title="Contact us">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="social-media">
+                <a href="https://www.facebook.com/bonfork/" title="Follow on Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/bonfork/" title="Follow on Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com/_Bonfork_" title="Follow on Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+
+            <div class="copyright">
+                <span>Restaurant website by
+                    <a href="https://bonfork.com/">Bonfork</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/js/intlTelInput.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timepicker@1.13.0/jquery.timepicker.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/stepsForm.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".reveal").addClass("show");
+        });
+    </script>
+</body>
+
+</html>

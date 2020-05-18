@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A demo website for the Deerhurst Restaurant Template" />
+    <meta name="keywords" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://deerhurst.bonfork.net/gallery" />
+    <meta property="og:title" content="Deerhurst Restaurant" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="A demo website for the Deerhurst Restaurant Template" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous">
+
+    <link rel="dns-prefetch" href="//fonts.googleapis.com/">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com/">
+    <!--
+    ____   __   __ _  ____  __  ____  __ _
+    (  _ \ /  \ (  ( \(  __)/  \(  _ \(  / )
+    ) _ ((  O )/    / ) _)(  O ))   / )  (
+    (____/ \__/ \_)__)(__)  \__/(__\_)(__\_)
+    -->
+    <title>Deerhurst - Gallery</title>
+    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon-180x180.png" />
+
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/simplelightbox.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/component.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+    <!-- Schema json -->
+    <script id="data" type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "Restaurant",
+          "priceRange": "$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Toronto",
+            "addressRegion": "ON",
+            "addressCountry": "Canada",
+            "postalCode": "M5E 1Z9",
+            "streetAddress": "12 Yonge St."
+          },
+          "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 43.643162,
+              "longitude": -79.376259
+          },
+          "name": "Deerhurst Restaurant",
+          "telephone": "+44 (0)1234 56789",
+          "url": "https://deerhurst.bonfork.net",
+          "paymentAccepted": "",
+          "description": "Deerhurst Restaurant Demo description. Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam id urna egestas ultricies nulla at viverra nibh donec sollicitudin metus sit amet est laoreet gravida donec cursus enim quis.",
+        
+          "servesCuisine": "French cuisine",
+          "hasMenu": "https://deerhurst.bonfork.net/menu",
+          "acceptsReservations": "True",
+          
+          "openingHoursSpecification": [
+              {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                      "Monday",
+                      "Tuesday",
+                      "Wednesday",
+                      "Thursday",
+                      "Friday",
+                      "Saturday",
+                      "Sunday"
+                  ],
+                  "opens": "11:00",
+                  "closes": "23:00"
+              }
+          ]
+      }
+  </script>
+</head>
+
+<body>
+    <div class="modal permalink page-model modal-fullscreen fade" id="theModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    ... remote content from "data-remote" loads here ...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed-top main-menu">
+        <img src="images/close.svg" alt="Close Menu" class="img-fluid" id="close-icon">
+        <ul class="nav flex-column">
+            <li class="nav-item delay-1">
+                <a class="nav-link" href="story.html" title="Story">Story</a>
+            </li>
+            <li class="nav-item delay-2">
+                <a class="nav-link" href="menu.html" title="Our Menus">Menu</a>
+            </li>
+            <li class="nav-item delay-3">
+                <a class="nav-link active" href="gallery.html" title="Gallery">Gallery</a>
+            </li>
+            <li class="nav-item delay-4">
+                <a class="nav-link " href="contact.html" title="Contact us">Contact us</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="schedule"></div>
+
+    <header>
+        <a href="index.html">
+            <img src="images/logo.png" alt="Logo" class="img-fluid">
+        </a>
+        <hr>
+        <hr>
+
+        <div class="menu d-none d-sm-block">
+            <ul>
+                <li>
+                    <a href="story.html" title="Story">Story</a>
+                </li>
+                <div class="dot"></div>
+                <li>
+                    <a href="menu.html" title="Menu">Menu</a>
+                </li>
+                <div class="dot"></div>
+                <li>
+                    <a href="gallery.html" title="Gallery" class="active">Gallery</a>
+                </li>
+                <div class="dot"></div>
+                <li>
+                    <a href="contact.html" title="Contact us">Contact us</a>
+                </li>
+            </ul>
+        </div>
+
+        <a class="nav-button nav-link d-flex justify-content-center d-sm-none">
+            <span id="nav-icon3">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+            <span class="menu-text">Menu</span>
+        </a>
+
+        <hr>
+    </header>
+
+    <div class="banner">
+        <h1>Gallery</h1>
+        <a ref="#theModal" class="btn btn-book cc-active" data-remote="/reservation.html" data-toggle="modal" data-target="#theModal"
+            title="Book your table">Book your table</a>
+    </div>
+
+    <hr id="banner-hr">
+
+    <div class="container">
+        <div class="grid">
+            <a href="images/gallery-3.jpg" title="Gallery Image">
+                <img src="images/thumbnails/thumbnail-3.jpg" class="img-fluid" alt="Gallery Image Thumbnail">
+            </a>
+            <a href="images/gallery-1.jpg" title="Gallery Image">
+                <img src="images/thumbnails/thumbnail-1.jpg" class="img-fluid mt-2 mt-md-5" alt="Gallery Image Thumbnail">
+            </a>
+            <a href="images/gallery-6.jpg" title="Gallery Image">
+                <img src="images/thumbnails/thumbnail-6.jpg" class="img-fluid" alt="Gallery Image Thumbnail">
+            </a>
+            <a href="images/gallery-9.jpg" title="Gallery Image">
+                <img src="images/thumbnails/thumbnail-9.jpg" class="img-fluid mt-2 mt-md-5" alt="Gallery Image Thumbnail">
+            </a>
+            <a href="images/gallery-4.jpg" title="Gallery Image">
+                <img src="images/thumbnails/thumbnail-4.jpg" class="img-fluid mt-2 mt-md-5" alt="Gallery Image Thumbnail">
+            </a>
+            <a href="images/gallery-2.jpg" title="Gallery Image">
+                <img src="images/thumbnails/thumbnail-2.jpg" class="img-fluid" alt="Gallery Image Thumbnail">
+            </a>
+            <a href="images/gallery-5.jpg" title="Gallery Image">
+                <img src="images/thumbnails/thumbnail-5.jpg" class="img-fluid mt-2 mt-md-5" alt="Gallery Image Thumbnail">
+            </a>
+            <a href="images/gallery-7.jpg" title="Gallery Image">
+                <img src="images/thumbnails/thumbnail-7.jpg" class="img-fluid" alt="Gallery Image Thumbnail">
+            </a>
+            <a href="images/gallery-8.jpg" title="Gallery Image">
+                <img src="images/thumbnails/thumbnail-8.jpg" class="img-fluid" alt="Gallery Image Thumbnail">
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <img src="images/bottom-logo.png" alt="Footer Logo" class="img-fluid">
+
+            <h6>Subcribe to our newsletter</h6>
+
+            <form id="newsletter-form" class="simform" autocomplete="off" method="POST">
+                <div class="simform-inner">
+                    <ol class="questions">
+                        <li>
+                            <input type="text" name="name" id="name" required="required" placeholder="your name" />
+                        </li>
+                        <li>
+                            <input type="email" name="email" id="email" required="required" placeholder="your email" />
+                        </li>
+                    </ol>
+                    <button class="submit" type="submit">Submit</button>
+                    <div class="controls">
+                        <button class="next"></button>
+                        <div class="progress"></div>
+                        <span class="number">
+                            <span class="number-current"></span>
+                            <span class="number-total"></span>
+                        </span>
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+                <span class="final-message"></span>
+
+            </form>
+
+            <div class="footer-menu">
+                <ul>
+                    <li>
+                        <a href="story.html" title="Story">Story</a>
+                    </li>
+                    <li>
+                        <a href="menu.html" title="Menu">Menu</a>
+                    </li>
+                    <li>
+                        <a href="gallery.html" title="Gallery">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" title="Contact us">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="social-media">
+                <a href="https://www.facebook.com/bonfork/" title="Follow on Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/bonfork/" title="Follow on Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com/_Bonfork_" title="Follow on Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+
+            <div class="copyright">
+                <span>Restaurant website by
+                    <a href="https://bonfork.com/">Bonfork</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.6/js/intlTelInput.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timepicker@1.13.0/jquery.timepicker.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/stepsForm.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/gridify.js"></script>
+    <script src="js/simple-lightbox.js"></script>
+
+    <script type="text/javascript">
+        $(window).load(function () {
+            var options =
+                {
+                    srcNode: 'img',             // grid items (class, node)
+                    margin: '20px',             // margin in pixel, default: 0px
+                    width: '450px',             // grid item width in pixel, default: 220px
+                    max_width: '550px',              // dynamic gird item width if specified, (pixel)
+                    resizable: true,            // re-layout if window resize
+                    transition: 'all 0.5s ease' // support transition for CSS3, default: all 0.5s ease
+                }
+            $('.grid').gridify(options);
+        });
+
+        $(function () {
+            var $gallery = $('.grid a').simpleLightbox();
+        });
+    </script>
+</body>
+
+</html>
