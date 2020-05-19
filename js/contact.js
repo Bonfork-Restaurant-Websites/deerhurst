@@ -297,12 +297,12 @@ if ($('#contact-form').length) {
                     url:"./includes/mail-3.php",
                     data: $(form).serialize(),
                     success: function() {
-                        document.querySelector('.alert-success').style.display = 'block';
+                        document.querySelector('.alert-contact').style.display = 'block';
                         console.log("Success");
                     },
 
                     error: function(){
-                        document.querySelector('.alert-danger').style.display = 'block';
+                        document.querySelector('.alert-contact-error').style.display = 'block';
                         console.log("Fail");
                     }
                 });

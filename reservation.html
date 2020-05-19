@@ -18,13 +18,16 @@
     </div>
     <h2 class="text-center">Book a table</h2>
     <div class="container">
-        <div class="alert alert-success" role="alert" id="reservation-alert">
+        <div class="alert alert-success alert-reservation" role="alert" >
             Your reservation request has been sent. One of our staff will get back to you with a confirmation.
+        </div>
+        <div class="alert alert-danger alert-reservation-error" role="alert" >
+            Something went wrong!
         </div>
         <form id="reservation-form" method="POST">
             <div class="form-group">
                 <label for="NO. of Guests">NO. of guests*</label>
-                <input type="number" name="NO. of Guests" class="form-control" value="2" placeholder="Please Select" required>
+                <input type="number" name="guests" class="form-control" value="2" placeholder="Please Select" required>
             </div>
             <div class="row">
                 <div class="col-6">
@@ -42,26 +45,23 @@
             </div>
             <div class="form-group">
                 <label for="Name">Name*</label>
-                <input type="text" name="Name" class="form-control" required>
+                <input type="text" name="name" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="Email">Email*</label>
-                <input type="email" name="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" oninvalid="setCustomValidity('Please enter a valid email address!')"
+                <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" oninvalid="setCustomValidity('Please enter a valid email address!')"
                     onchange="setCustomValidity('')" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="Phone">Phone*</label>
                 <br>
-                <input type="tel" name="Phone" id="phone" class="form-control" required>
+                <input type="tel" name="phone" id="phone" class="form-control" required>
             </div>
 
             <div class="g-recaptcha" data-sitekey="6LeOfscSAAAAAKD9-ghZaZ907gH4-wJ9k2f5l9F4"></div>
 
             <button type="submit" class="btn btn-submit btn-block" id="submit">Book your table</button>
 
-            <input type="hidden" name="_to" value="matty@aledia.ca">
-            <input type="text" name="_gotcha" style="display: none;">
-            <input type="hidden" name="_subject" value="Reservation Submission">
         </form>
     </div>
 </div>
@@ -109,42 +109,6 @@
             })
         }
     });
-
-    // Helper function to get form data in the supported format
-    function getFormDataString(formEl) {
-        var formData = new FormData(formEl),
-            data = [];
-
-        for (var keyValue of formData) {
-            data.push(encodeURIComponent(keyValue[0]) + "=" + encodeURIComponent(keyValue[1]));
-        }
-
-        return data.join("&");
-    }
-
-    // Fetch the form element
-    var reservationForm = document.getElementById("reservation-form");
-
-    // Override the submit event
-    reservationForm.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        var request = new XMLHttpRequest();
-
-        request.addEventListener("load", function () {
-            if (request.status === 302) { // CloudCannon redirects on success
-                // It worked
-            }
-        });
-
-        request.open(reservationForm.method, reservationForm.action);
-        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        request.send(getFormDataString(reservationForm));
-        reservationForm.style.display = 'none';
-        document.getElementById('reservation-alert').style.display = 'block';
-    });
-
-
     // Browser Support
     var ua = navigator.userAgent.toLowerCase();
     if (ua.indexOf('safari') != -1) {
@@ -160,4 +124,28 @@
             }
         }
     }
+    if ($('#reservation-form').length) {
+    $('#reservation-form').each(function(){
+        $(this).validate({
+            errorClass: 'error wobble-error',
+            submitHandler: function(form){
+                $.ajax({
+                    type: "POST",
+                    url:"./includes/mail.php",
+                    data: $(form).serialize(),
+                    success: function() {
+                        document.querySelector('.alert-reservation').style.display = 'block';
+                        console.log("Success");
+                    },
+
+                    error: function(){
+                        document.querySelector('.alert-reservation-error').style.display = 'block';
+                        console.log("Fail");
+                    }
+                });
+            }
+        });
+    });
+}
+
 </script>

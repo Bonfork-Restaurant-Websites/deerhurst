@@ -1,12 +1,12 @@
 <?php
 $name = $_POST["name"];
 $email = $_POST["email"];
-$subject = $_POST["subject"];
+$phone = $_POST["phone"];
 $message = $_POST["message"];
 
 
 $EmailTo = "matty@aledia.ca";
-$Subject = "New Message Received";
+$phone = "New Message Received";
 
 // prepare email body text
 $Fields .= "Name: ";
@@ -17,8 +17,8 @@ $Fields.= "Email: ";
 $Fields .= $email;
 $Fields .= "\n";
 
-$Fields .= "Subject: ";
-$Fields .= $subject;
+$Fields .= "Phone: ";
+$Fields .= $phone;
 $Fields .= "\n";
 
 $Fields.= "Message: ";
